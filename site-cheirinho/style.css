@@ -8,12 +8,14 @@
     font-family: "Bebas Neue", sans-serif;
     font-size: 16px;
     transition: 0.2s;
+
 }
 
 :root {
     --golden-color: #544f40;
     --bg-color: #121212;
-    --border: 0.5px solid #D4AF37;
+    --border: 5px solid #D4AF37;
+    --subtitle-border: 0.5px solid #D8B980;
     --box-border: 3px solid #D4AF37;
     --text-collor: #CCCCCC;
     --highlight-color: #1E1E1E;
@@ -125,6 +127,7 @@ section {
 #initial-content > h1 {
     font-size: 5rem;
     color: var(--title-color);
+    border-bottom: var(--border);
 }
 
 #initial-content > p {
@@ -138,6 +141,7 @@ section {
     text-align: justify;
     color: var(--text-collor);
 }
+
 
 .content-text > h1 {
     font-size: 3rem;
@@ -155,27 +159,34 @@ section {
     text-align: center;
     font-size: 5rem;
     color: var(--title-color);
+    border-bottom: var(--border);
 }
+
 
 .product-category {
     margin-top: 5rem;
     text-align: center;
 }
 
+
 .product-category h2 {
     font-size: 3rem;
     color: var(--subtitle-color);
+    border-bottom: var(--subtitle-border);
+
 }
 
 .product-images {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     gap: 10rem;
     margin-top: 2rem;
 }
 
 .product-image {
-    width: 100px;
+    min-width: 100px;
+    max-width: 200px;
 }
 
 #contact-content {
@@ -204,6 +215,10 @@ section {
 
 #contact-content > ul > li > a {
     font-size: 2rem;
+}
+.icon{
+    font-size: 2rem;
+    margin-right: 10px;
 }
 
 
