@@ -1,0 +1,226 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 16px;
+    transition: 0.2s;
+
+}
+
+:root {
+    --golden-color: #544f40;
+    --bg-color: #121212;
+    --border: 5px solid #D4AF37;
+    --subtitle-border: 0.5px solid #D8B980;
+    --box-border: 3px solid #D4AF37;
+    --text-collor: #CCCCCC;
+    --highlight-color: #1E1E1E;
+    --title-color: #FFD700;
+    --subtitle-color: #D8B980;
+    --link-color: #C28840;
+    --link-hover-color: #FFD700;
+    --button-bg-color: #1F1A17;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: var(--border);
+    background-color: var(--bg-color);
+    max-width: 1500px;
+    margin: auto;
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+h1 {
+    color: var(--subtitle-color);
+}
+
+#header-logo {
+    width: 100px;
+    margin-left: 50px;
+}
+
+#header-text {
+    text-align: center;
+    margin: 0 auto;
+    width: 300px;
+    height: 160px;
+}
+
+#header-text > h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: var(--title-color);
+    border-bottom: var(--border);
+}
+
+#header-nav > ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+#header-nav > ul > li > a {
+    font-size: 2rem;
+    padding-right: 10px;
+    background-color: var(--button-bg-color);
+    border: var(--box-border);
+    padding: 5px 15px;
+    border-radius: 15px;
+}
+
+#header-nav > ul > li > a:hover {
+    background-color: #483c35;
+}
+
+section {
+    margin: auto;
+    max-width: 1500px;
+    min-width: 445px;
+    background-color: white;
+    border: var(--box-border);
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+#header-sec {
+    border: none;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#initial-content {
+    margin-top: 20rem;
+    margin-bottom: 10rem;
+    border: none;
+    text-align: center;
+    padding-bottom: 200px;
+}
+
+#initial-content > h1 {
+    font-size: 5rem;
+    color: var(--title-color);
+    border-bottom: var(--border);
+}
+
+#initial-content > p {
+    font-size: 4rem;
+    padding: 100px;
+    color: var(--text-collor);
+}
+
+.content-text > p {
+    font-size: 2rem;
+    text-align: justify;
+    color: var(--text-collor);
+}
+
+
+.content-text > h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--subtitle-color);
+    font-weight: bolder;
+}
+
+#main-content {
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+}
+
+#main-content-title {
+    text-align: center;
+    font-size: 5rem;
+    color: var(--title-color);
+    border-bottom: var(--border);
+}
+
+
+.product-category {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+
+.product-category h2 {
+    font-size: 3rem;
+    color: var(--subtitle-color);
+    border-bottom: var(--subtitle-border);
+
+}
+
+.product-images {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10rem;
+    margin-top: 2rem;
+}
+
+.product-image {
+    min-width: 100px;
+    max-width: 200px;
+}
+
+#contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#contact-content > h1 {
+    font-size: 2.5rem;
+    color: var(--title-color);
+    margin-bottom: 2rem;
+}
+
+#contact-content > h2 {
+    color: var(--text-collor);
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+#contact-content > ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+#contact-content > ul > li > a {
+    font-size: 2rem;
+}
+.icon{
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+
+
+
