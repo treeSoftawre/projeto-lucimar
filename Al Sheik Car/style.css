@@ -104,7 +104,6 @@ section {
     min-width: 445px;
     background-color: white;
     border: var(--box-border);
-    border-radius: 15px;
     padding: 2rem;
 }
 
@@ -220,6 +219,7 @@ section {
     font-size: 2rem;
     margin-right: 10px;
 }
+
 
 
 
