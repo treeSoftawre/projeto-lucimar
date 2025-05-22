@@ -1,0 +1,115 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;;
+    font-size: 40px;
+    color: var(--color);
+}
+:root{
+    --color: #2E2E2E;
+    --highligth-color: #F4EDE4;
+    --header-color: #2E2E2E;
+}
+body{
+    background-image: url(images/background-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#site-logo{
+    width: 50px;
+}
+#header-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+#header-text > h1{
+    color: var(--highligth-color);;
+}
+.bi{
+    color: var(--highligth-color);
+}
+
+header{
+    background-color: var(--header-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95vw;
+    border-radius: 5px;
+}
+header > nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header > nav > a{
+    background-color: var(--highligth-color);
+    font-size: 0.8rem;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    
+}
+
+main{
+    margin-top: 250px;
+}
+#main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 250px;
+}
+#model-image{
+    width: 100vw;
+    border-bottom: 1px solid black;
+}
+#product-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 250px;
+}
+.product-content-item{
+    width: 200px;
+}
+#about-content{
+    text-align: center;
+    margin-bottom: 250px
+}
+footer{
+    text-align: center;
+}
+#contact-content{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+#contact-content > a{
+    text-align: center;
+    margin:auto;
+    width: 50%;
+}
+#contact-content > iframe{
+    margin: auto;
+    display: block;
+}
+
+
