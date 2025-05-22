@@ -14,11 +14,14 @@
     --color: #2E2E2E;
     --highligth-color: #F4EDE4;
     --header-color: #2E2E2E;
+    --subtitle-bg-color: #6a040f;
+    --subtitle-color: #f4e4c1;
 }
 body{
     background-image: url(images/background-image.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
+    background-attachment: fixed;
 }
 #site-logo{
     width: 50px;
@@ -76,11 +79,10 @@ main{
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 250px;
 }
 #model-image{
     width: 100vw;
-    border-bottom: 1px solid black;
+    border-top: 2px solid var(--subtitle-bg-color);
 }
 #product-content{
     display: flex;
@@ -88,6 +90,9 @@ main{
     align-items: center;
     text-align: center;
     margin-bottom: 250px;
+}
+#product-content > h2{
+    margin-bottom: 300px;
 }
 .product-content-item{
     width: 200px;
@@ -107,15 +112,36 @@ footer{
 #contact-content > a{
     text-align: center;
     margin:auto;
-    width: 50%;
+    width: 195px;
 }
 #contact-content > iframe{
     margin: auto;
     display: none;
 }
+iframe{
+    width: 100vw;
+}
+.subtitle{
+    background-image: linear-gradient(135deg, var(--subtitle-bg-color), #ff7849 );
+    color: var(--subtitle-color);
+    font-size: 1.5rem;
+    width: 100vw;
+    padding: 50px 0px;
+}
+#view-button{
+    width: 100vw;
+    margin: auto;
+    background-color: var(--subtitle-bg-color);
+    color: var(--subtitle-color);
+}
+#view-button:hover{
+    background-color: var(--subtitle-color);
+    color: var(--subtitle-bg-color);
+    cursor: pointer;
+}
 
 @media screen and (min-width: 1024px){
-    .bi{
+    header > .bi{
         display: none;
     }
     header > nav{
@@ -129,6 +155,12 @@ footer{
     header > nav > a:hover{
         background-color: var(--color);
         color: var(--highligth-color);
+    }
+    iframe{
+        width: 50vw;
+    }
+    #view-button{
+        width: 20vw;
     }
 }
 

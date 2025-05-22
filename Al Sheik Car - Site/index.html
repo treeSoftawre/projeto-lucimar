@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <title>Al Sheik Car - Página Inicial</title>
 </head>
-<body>
+<body onresize="resize(navegation)">
     <header>
         <div id="header-text">
             <img src="images/logo-image.png" alt="Logo do site" id="site-logo">
@@ -15,9 +15,9 @@
         </div>
         <i class="bi bi-list" onclick="clickMenu(navegation, 'flex')"></i>
         <nav id="navegation">
-            <a href="#product-content">Produtos</a>
+            <a href="#products">Produtos</a>
             <a href="#about-content">Sobre Nós</a>
-            <a href="#contact-content">Contato</a>
+            <a href="#contact">Contato</a>
         </nav>
     </header>
     <main>
@@ -30,9 +30,9 @@
         </section >
 
         <section id="product-content">
-            <h2>Produtos</h2>
+            <h2 class="subtitle" id="products">Produtos</h2>
             <div class="product-content-topic">
-                <h3>Times</h3>
+                <h3 >Times</h3>
                 <img src="images/product-corinthians-image.png" alt="Imagem do aromatizante" class="product-content-item">
                 <img src="images/product-flamengo-image.png" alt="Imagem do aromatizante" class="product-content-item">
                 <img src="images/product-palemiras-image.png" alt="Imagem do aromatizante" class="product-content-item">
@@ -53,22 +53,24 @@
         </section>
 
         <section id="about-content">
-            <h2>Nome do rapaz</h2>
+            <h2 class="subtitle">Sobre nós</h2>
+            <h3>Nome do rapaz</h3>
             <p>Descrição das informações do rapaz</p>
             <img src="#" alt="Foto do vendedor">
         </section>
     </main>
     <footer>
-        <h4>Entre em contato já!</h3>
+        <h2 class="subtitle" id="contact">Contato</h2>
         <section id="contact-content">
             <a href="https://wa.me/5517997247263" target="_blank"><i class="bi bi-whatsapp icon"></i>Whatsapp</a>
             <a href="https://www.instagram.com/alsheikcar/" target="_blank"><i class="bi bi-instagram icon"></i>Instagram</a>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3729.012842701253!2d-49.368016723833584!3d-20.831187867004818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bdb3ba409debab%3A0x5be75866a431d617!2sJamil%20Houmsi%20Barbearia!5e0!3m2!1spt-BR!2sbr!4v1744676226913!5m2!1spt-BR!2sbr" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="loc"></iframe>
-            <button onclick="clickMenu(loc, 'block')">Ver localização</button>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3729.012842701253!2d-49.368016723833584!3d-20.831187867004818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bdb3ba409debab%3A0x5be75866a431d617!2sJamil%20Houmsi%20Barbearia!5e0!3m2!1spt-BR!2sbr!4v1744676226913!5m2!1spt-BR!2sbr" width="300" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="loc"></iframe>
+            <button onclick="clickMenu(loc, 'block'), setViewText()" id="view-button">Ver localização</button>
             
         </section>
     </footer>
     <script>
+        const locButton = document.getElementById("view-button");
         function clickMenu(item, displayOn){
             if(item.style.display == displayOn){
                 item.style.display = 'none';
@@ -76,6 +78,21 @@
                 item.style.display = displayOn;
             }
         }
+        function setViewText(){
+            if (locButton.innerText == "Ver localização"){
+                locButton.innerText = "Fechar localização";
+            } else{
+                locButton.innerText = "Ver localização";
+            }
+        }
+        function resize(item){
+            if (window.innerWidth >= 1024){
+                item.style.display = 'block';
+            } else{
+                item.style.display = 'none';
+            }
+        }
+        
     </script>
 </body>
 </html>
