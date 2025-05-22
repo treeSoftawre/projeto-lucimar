@@ -48,12 +48,14 @@ header{
     align-items: center;
     justify-content: center;
     width: 95vw;
+    max-width: 1024px;
     border-radius: 5px;
 }
 header > nav{
     display: flex;
     flex-direction: column;
     align-items: center;
+    display: none;
 }
 header > nav > a{
     background-color: var(--highligth-color);
@@ -109,7 +111,25 @@ footer{
 }
 #contact-content > iframe{
     margin: auto;
-    display: block;
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    .bi{
+        display: none;
+    }
+    header > nav{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    header > nav > a{
+        margin-left: 5px;
+    }
+    header > nav > a:hover{
+        background-color: var(--color);
+        color: var(--highligth-color);
+    }
 }
 
 
