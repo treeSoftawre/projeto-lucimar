@@ -80,9 +80,15 @@ main{
     justify-content: center;
     text-align: center;
 }
-#model-image{
+
+#model-image-phone{
     width: 100vw;
     border-top: 2px solid var(--subtitle-bg-color);
+    display: block;
+    
+}
+#model-image-desktop{
+    display: none;
 }
 #product-content{
     display: flex;
@@ -125,7 +131,7 @@ iframe{
     background-image: linear-gradient(135deg, var(--subtitle-bg-color), #ff7849 );
     color: var(--subtitle-color);
     font-size: 1.5rem;
-    width: 100vw;
+    width: 99.2vw;
     padding: 50px 0px;
 }
 #view-button{
@@ -161,6 +167,13 @@ iframe{
     }
     #view-button{
         width: 20vw;
+    }
+    #model-image-phone{
+        display: none;
+    }
+    #model-image-desktop{
+        display: block;
+        width: 99.2vw;
     }
 }
 
