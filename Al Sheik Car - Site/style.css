@@ -33,7 +33,7 @@ html, body{
 }
 body{
     overflow-x: hidden;
-    background-color: #ff7849;
+    background-color: var(--bg-color);
 }
 
 
