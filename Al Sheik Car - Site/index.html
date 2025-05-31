@@ -35,22 +35,28 @@
                 <h2 class="subtitle" id="products">Produtos</h2>
                 <div class="product-content-topic">
                     <h3 >Times</h3>
-                    <img src="images/product-corinthians-image.png" alt="Imagem do aromatizante" class="product-content-item">
-                    <img src="images/product-flamengo-image.png" alt="Imagem do aromatizante" class="product-content-item">
-                    <img src="images/product-palemiras-image.png" alt="Imagem do aromatizante" class="product-content-item">
-                    <img src="images/product-saopaulo-image.png" alt="Imagem do aromatizante" class="product-content-item">
-                    <img src="images/product-vasco-image.png" alt="Imagem do aromatizante" class="product-content-item">
+                    <div class="slider">
+                        <button onclick="changeImage('Team', -1)">&#10094;</button>
+                        <img src="images/product-corinthians-image.png" alt="Imagem do produto" id="slider-image-team">
+                        <button onclick="changeImage('Team', 1)">&#10095;</button>
+                    </div>
                 </div>
                 <div class="product-content-topic">
                     <h3>Bandeiras</h3>
-                    <img src="images/product-brazil-image.png" alt="Imagem do aromatizante" class="product-content-item">
-                    <img src="images/product-eua-image.png" alt="Imagem do aromatizante" class="product-content-item">
+                    <div class="slider">
+                        <button onclick="changeImage('Flag', -1)">&#10094;</button>
+                        <img src="images/product-brazil-image.png" alt="Imagem do produto" id="slider-image-flag">
+                        <button onclick="changeImage('Flag', 1)">&#10095;</button>
+                    </div>
                 </div>
                 <div class="product-content-topic">
                     <h3>Natureza</h3>
-                    <img src="images/product-bird-image.png" alt="Imagem do aromatizante" class="product-content-item">
-                    <img src="images/product-lion-image.png" alt="Imagem do aromatizante" class="product-content-item">
-                    <img src="images/product-flower-image.png" alt="Imagem do aromatizante" class="product-content-item">
+                    <div class="slider">
+                        <button onclick="changeImage('Nature', -1)" class="arrow-button">&#10094;</button>
+                        <img src="images/product-bird-image.png" alt="Imagem do produto"
+                        id="slider-image-nature">
+                        <button onclick="changeImage('Nature', 1)">&#10095;</button>
+                    </div>
                 </div>
             </section>
             <section id="about-content">
@@ -73,6 +79,42 @@
     </div>
     <script>
         const locButton = document.getElementById("view-button");
+        const productTeamImages = ["images/product-corinthians-image.png", "images/product-flamengo-image.png", "images/product-palmeiras-image.png", "images/product-saopaulo-image.png", "images/product-vasco-image.png"]
+        const productFlagImages = ["images/product-brazil-image.png", "images/product-eua-image.png"]
+        const productNatureImages = ["images/product-bird-image.png", "images/product-flower-image.png", "images/product-lion-image.png"]
+        let actualIndex = 0
+
+        function showImage(typeOfProduct){
+            switch(typeOfProduct){
+                case "Team":
+                    document.getElementById("slider-image-team").src = productTeamImages[actualIndex];
+                    break;
+                case "Flag":
+                    document.getElementById("slider-image-flag").src = productFlagImages[actualIndex];
+                    break;
+                case "Nature":
+                    document.getElementById("slider-image-nature").src = productNatureImages[actualIndex];
+                    break;
+            }
+        }
+        function changeImage(typeOfProduct, modifier){
+            let images;
+            switch(typeOfProduct){
+                case "Team":
+                    images = productTeamImages;
+                    break;
+                case "Flag":
+                    images = productFlagImages;
+                    break;
+                case "Nature":
+                    images = productNatureImages;
+                    break;
+            }
+            actualIndex = (actualIndex + modifier + images.length) % images.length;
+            showImage(typeOfProduct);
+        }
+        
+
         function clickMenu(item, displayOn){
             if(item.style.display == displayOn){
                 item.style.display = 'none';
