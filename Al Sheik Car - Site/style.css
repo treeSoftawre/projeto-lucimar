@@ -121,7 +121,7 @@ main{
 .slider{
     position: relative;
     width: 70vw; 
-    height: 300px;
+    height: 70vw;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -165,6 +165,16 @@ main{
 footer{
     text-align: center;
 }
+.contact-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 3px solid var(--color);
+    border-radius: 50%;
+    background-color: #51bb7a4c;
+}
 #contact-content{
     display: flex;
     flex-direction: column;
@@ -178,6 +188,7 @@ footer{
     margin: auto;
     gap: 30px;
 }
+
 
 .bi{
     color: var(--subtitle-bg-color);
@@ -224,14 +235,6 @@ footer{
     }
     .slider > img{
         width: 14vw;
-    }
-    #contact-content > div > a{
-        transition: transform 0.2s ease;
-        transform-origin: center;
-    }
-    #contact-content > div > a:hover {
-        transform: scale(1.1) translateY(-2px);
-        
     }
 }
 
